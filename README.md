@@ -34,4 +34,4 @@ $ pip install -r requirements.txt
 
 ## License
 
-GNU © SmartSight
+GPL © SmartSight
