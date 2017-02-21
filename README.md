@@ -1,4 +1,6 @@
-# SmartSight Engine
+<h1 align="center">
+  <img src="https://github.com/smartsight/smartsight-art/raw/master/logo/variants/engine/logo.png" alt="SmartSight Engine">
+</h1>
 
 > Engine for the SmartSight app in Python 3
 
