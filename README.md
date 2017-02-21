@@ -4,6 +4,8 @@
 
 > Engine for the SmartSight app in Python 3
 
+SmartSight engine is a [deep learning](https://en.wikipedia.org/wiki/Deep_learning) engine based on Tensorflow.
+
 ## Usage
 
 ```console
