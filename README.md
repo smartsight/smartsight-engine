@@ -4,12 +4,31 @@
 
 > Engine for the SmartSight app in Python 3
 
-SmartSight engine is a [deep learning](https://en.wikipedia.org/wiki/Deep_learning) engine based on Tensorflow.
+SmartSight engine is an image recognition algorithm based on [Tensorflow](https://github.com/tensorflow/tensorflow) and trained on [ImageNet](http://www.image-net.org/) data set.
 
 ## Usage
 
 ```console
 $ python classify.py --image_file <path to the image>
+
+[
+  {
+    "class": "pizza, pizza pie",
+    "score": 0.884148
+  }, {
+    "class": "butcher shop, meat market",
+    "score": 0.002444
+  }, {
+    "class": "carbonara",
+    "score": 0.00208
+  }, {
+    "class": "trifle",
+    "score": 0.002078
+  }, {
+    "class": "pomegranate",
+    "score": 0.001326
+  }
+]
 ```
 
 ## Install
