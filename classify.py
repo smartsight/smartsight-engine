@@ -52,9 +52,6 @@ FLAGS = None
 DATA_URL = 'http://download.tensorflow.org/models/image/imagenet/inception-2015-12-05.tgz'
 # pylint: enable=line-too-long
 
-# Array containing the classification results
-results = []
-
 
 class NodeLookup(object):
   """Converts integer node ID's to human readable labels."""
@@ -147,6 +144,9 @@ def run_inference_on_image(image):
   # Creates graph from saved GraphDef.
   create_graph()
 
+  # Array containing the classification results
+  results = []
+
   with tf.Session() as sess:
     # Some useful tensors:
     # 'softmax:0': A tensor containing the normalized prediction across
@@ -173,6 +173,8 @@ def run_inference_on_image(image):
         'score': (float) ('%.6f' % score)
       })
 
+    print(json.dumps(results))
+
 
 def maybe_download_and_extract():
   """Download and extract model tar file."""
@@ -196,8 +198,6 @@ def maybe_download_and_extract():
 def main(_):
   maybe_download_and_extract()
   run_inference_on_image(FLAGS.image_file)
-
-  print(json.dumps(results))
 
 
 if __name__ == '__main__':
